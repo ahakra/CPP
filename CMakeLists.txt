@@ -5,22 +5,16 @@ project(CPP
         LANGUAGES CXX
 )
 
-# Use modern C++
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Add executable
 add_executable(CPP
         src/main.cpp
+        src/tour_of_cpp/ch_01.cpp
 )
 
-# Include headers
 target_include_directories(CPP
         PRIVATE
         src
-)
-target_compile_features(CPP
-        PRIVATE
-        cxx_std_23
 )
